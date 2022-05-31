@@ -34,6 +34,6 @@ router
   .put(protect, updateBootcamp)
   .delete(protect, deleteBootcamp);
 
-router.route('/:id/photo').put(bootcampPhotoUpload);
+router.route('/:id/photo').put(protect, bootcampPhotoUpload);
 
 module.exports = router;
